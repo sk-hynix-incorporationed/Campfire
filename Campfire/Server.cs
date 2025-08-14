@@ -27,16 +27,28 @@ namespace Campfire
         {
             var stream = client.GetStream();
             byte[] buffer = new byte[4096];
+
             try
             {
                 while (true)
                 {
                     int len = stream.Read(buffer, 0, buffer.Length);
                     if (len == 0) break;
+
                     string msg = Encoding.UTF8.GetString(buffer, 0, len);
+                    Console.WriteLine(msg);
+                    Broadcast(msg);
                 }
             }
-            finally { lock (clients) { clients.Remove(client); } client.Close(); }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Client error: {ex.Message}");
+            }
+            finally
+            {
+                lock (clients) { clients.Remove(client); }
+                client.Close();
+            }
         }
         public static void Broadcast(string msg)
         {

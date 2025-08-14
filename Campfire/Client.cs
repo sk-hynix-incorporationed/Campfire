@@ -20,8 +20,8 @@ namespace Campfire
             while (true)
             {
                 string line = Console.ReadLine();
-                string mesg = $"{name} {line}";
-                byte[] data = Encoding.UTF8.GetBytes(line);
+                string mesg = $"{name}: {line}";
+                byte[] data = Encoding.UTF8.GetBytes(mesg);
                 stream.Write(data, 0, data.Length);
             }
         }
