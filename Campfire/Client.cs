@@ -9,7 +9,7 @@ namespace Campfire
 {
     internal class Client
     {
-        public static void Main()
+        public static void Start()
         {
             Console.Write("Enter fire IP: "); string ip = Console.ReadLine();
             Console.WriteLine("Enter name"); string name = Console.ReadLine();

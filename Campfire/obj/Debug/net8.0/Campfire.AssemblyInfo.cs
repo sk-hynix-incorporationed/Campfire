@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Campfire")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57c3a8593feaaff5f98e2a78dfe4fa0240178b6d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Campfire")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Campfire")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
